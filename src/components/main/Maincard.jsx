@@ -10,9 +10,11 @@ const Slideimg = [
   { img: "images/mainimg/mach2.png", hiding: "EM-1010", amm: "10 needles" },
   { img: "images/mainimg/machone.png", hiding: "MT-1501", amm: "15 needles" },
 ];
+
 function Maincard() {
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 800;
+
   return (
     <div>
       <div>
@@ -113,7 +115,6 @@ function Maincard() {
                       </div>
                     </div>
                   </div>
-
                   {/* Card 1 end */}
 
                   {/* Card 2 */}
@@ -170,7 +171,7 @@ function Maincard() {
             </div>
             {/* Card 2 end */}
             <div className="pt-[16rem] mob:pt-[1rem] px-12 mob:pb-4 tab:pt-0 tab:pb-6">
-              <p className="text-sm pt-6">
+              <p className="text-md pt-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Consectetur auctor malesuada hendrerit nec, porttitor nunc
                 tristique. Egestas eget fermentum at eget nunc et nisi eu lorem.

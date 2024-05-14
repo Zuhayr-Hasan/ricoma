@@ -39,7 +39,7 @@ function FormPage() {
           <h1 className="text-semibold text-center pt-2 text-lg text-[#071235]">
             Dictumst dui egestas.
           </h1>
-          <div className="flex items-center gap-x-2 tab:justify-between">
+          <div className="lg:mt-5 flex items-center gap-x-2 tab:justify-between">
             <div className="tab:w-full">
               <label
                 htmlFor=""
@@ -53,10 +53,7 @@ function FormPage() {
                 name=""
                 id=""
                 placeholder="Enter your first name"
-                className="outline-none pl-2 border-[1px] placeholder:text-sm placeholder:text-[#929292] placeholder:italic
-                            py-2 placeholder:text-center border-[#315787] rounded-md placeholder:font-normal
-                            w-full 
-                            "
+                className="outline-none border-[1px] placeholder:text-sm placeholder:text-[#929292] py-2 placeholder:text-center border-[#315787] rounded-md placeholder:font-normal w-full"
               />
             </div>
             <div className="tab:w-full">
@@ -72,11 +69,7 @@ function FormPage() {
                 name=""
                 id=""
                 placeholder="Enter your last name"
-                className=" 
-                                pl-2 outline-none  border-[1px] placeholder:text-sm placeholder:text-[#929292] placeholder:italic border-[#315787] rounded-md
-                            py-2 placeholder:text-center placeholder:font-light
-                            w-full 
-                            "
+                className="outline-none border-[1px] placeholder:text-sm placeholder:text-[#929292] py-2 placeholder:text-center border-[#315787] rounded-md placeholder:font-normal w-full"
               />
             </div>
           </div>
@@ -93,11 +86,8 @@ function FormPage() {
                 type="text"
                 name=""
                 id=""
-                placeholder="Enter your email address"
-                className="outline-none pl-2 border-[1px] placeholder:text-sm placeholder:text-[#929292] placeholder:italic
-                            py-2 placeholder:text-center border-[#315787] rounded-md placeholder:font-normal w-full
-                            mob:placeholder:text-xs
-                            "
+                placeholder="Enter email address"
+                className="outline-none border-[1px] placeholder:text-sm placeholder:text-[#929292] py-2 placeholder:text-center border-[#315787] rounded-md placeholder:font-normal w-full"
               />
             </div>
             <div className="tab:w-full">
@@ -112,11 +102,8 @@ function FormPage() {
                 type="text"
                 name=""
                 id=""
-                placeholder="Enter your phone number"
-                className=" outline-none pl-2 border-[1px] placeholder:text-sm placeholder:text-[#929292] placeholder:italic border-[#315787] rounded-md
-                            py-2 placeholder:text-center placeholder:font-light
-                            w-full mob:placeholder:text-xs
-                            "
+                placeholder="Enter phone number"
+                className="outline-none border-[1px] placeholder:text-sm placeholder:text-[#929292] py-2 placeholder:text-center border-[#315787] rounded-md placeholder:font-normal w-full"
               />
             </div>
           </div>

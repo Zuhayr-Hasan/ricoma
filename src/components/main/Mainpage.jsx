@@ -23,18 +23,18 @@ function Mainpage() {
       {/* Below Customer lorem ips */}
       <div>
         <div>
-          <div className="bg-[#046ee7]  bgimg">
+          <div className="bg-[#046ee7] bgimg">
             <span>
-              <h1 className="text-white font-bold text-4xl mainperafont pt-12 pb-6 pl-24 mob:pl-2 mob:text-center">
+              <h1 className="text-white font-bold text-5xl mainperafont pt-[26px] pb-6 pl-24 mob:pl-2 mob:text-center">
                 Dui Augue Lectus <br />
                 In Ut At Lorem
               </h1>
             </span>
 
-            <div className=" px-24 flex justify-between gap-x-32 pb-24 mob:p-2 mob:flex-col-reverse tab:p-2 tab:flex-col-reverse ">
+            <div className="px-24 flex justify-between gap-x-32 pb-24 mob:p-2 mob:flex-col-reverse tab:p-2 tab:flex-col-reverse ">
               <div className="w-1/2 mob:w-full tab:w-full">
                 <div className="mainperafont  ">
-                  <p className="text-white text-base font-light pt-12 text-justify">
+                  <p className="text-white text-base font-light pt-5 text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Lorem nec aenean leo pulvinar morbi pulvinar sagittis, hac
                     massa. Vulputate bibendum et in mattis nec duis nec, magna.
@@ -44,7 +44,7 @@ function Mainpage() {
                       Semper nam ridiculus duis bibendum risus, arcu arcu.
                     </span>
                   </p>
-                  <p className="text-white text-base font-thin pt-12 text-justify ">
+                  <p className="text-white text-base font-thin pt-5 text-justify ">
                     Nulla ut elementum, nibh viverra pharetra eu. Aliquet sem
                     condimentum posuere cursus quis risus. Mauris, auctor
                     ridiculus blandit lacus.
@@ -93,7 +93,7 @@ function Mainpage() {
                   </div>
                 </div>
                 <div className="flex item center gap-x-10 p-12 items-center ">
-                  <div className="bg-[#FFECEC]  rounded-full min-w-[3rem] min-h-[3rem] flex justify-center ">
+                  <div className="bg-[#FFECEC] rounded-full min-w-[3rem] min-h-[3rem] flex justify-center ">
                     <img
                       src="images/mainimg/Direct From Factory.png"
                       alt=""
@@ -178,7 +178,7 @@ function Mainpage() {
           </div>
           {/* first card end */}
           {/* Sec card */}
-          <div className="w-1/2 bg-white shadow-lg shadow-slate-400 mob:w-full mob:mt-12 tab:w-full  ">
+          <div className="w-1/2 bg-white shadow-lg shadow-slate-400 mob:w-full mob:mt-12 tab:w-full">
             <Maincard />
           </div>
 

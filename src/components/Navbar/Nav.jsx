@@ -6,14 +6,15 @@ import { MdOutlineHome } from "react-icons/md";
 import { FiPlus } from "react-icons/fi";
 import { FiMinus } from "react-icons/fi";
 import { TiTick } from "react-icons/ti";
-import { FaLongArrowAltRight } from "react-icons/fa";
+// import { FaLongArrowAltRight } from "react-icons/fa";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+// import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Products = [
   {
-    img: "images/mainimg/machone.png",
+    img: "imaged/mainimg/machone.png",
     id: "EM-1010",
     price: "$5999",
     sname: "Starter Embroidery Machine",
@@ -48,30 +49,30 @@ function Nav() {
           <img src="images/logo.png" alt="" className="h-6 " />
         </div>
         <div className="hidden lg:block">
-          <ul className="inline-flex space-x-8">
-            <li className="text-sm font-medium text-white ">
+          <ul className="inline-flex space-x-[90px]">
+            <li className="text-sm font-medium text-white hover:text-[orange]">
               <Link to="/">HOME</Link>
             </li>
-            <li className="text-sm font-medium text-white ">
+            <li className="text-sm font-medium text-white hover:text-[orange]">
               <Link to="/products">PRODUCTS</Link>
             </li>
-            <li className="text-sm font-medium text-white ">
+            <li className="text-sm font-medium text-white hover:text-[orange]">
               <Link>ABOUT</Link>
             </li>
           </ul>
         </div>
-        <div className="flex ">
-          <div className="flex hover:cursor-pointer relative  ">
+        <div className="flex">
+          <div className="flex hover:cursor-pointer relative">
             <RiShoppingCartLine
               onClick={Cart}
-              className="text-white text-xl  right-3"
+              className="text-white text-xl right-3 w-[30px] h-[30px] hover:text-[orange]"
             />
-            <p className="h-3 min-w-3 text-[0.55rem] absolute   text-center rounded-full bg-[#0076FF] text-white">
+            <p className="h-3 min-w-3 text-[0.55rem] absolute text-center rounded-full bg-[#0076FF] text-white">
               2
             </p>
             {cartOpen ? (
-              <div className=" bg-black ">
-                <div className=" absolute top-10 -left-[26rem]  z-50 mob:-left-[18rem]   mainperafont w-[28rem] mob:w-[22rem] bg-white overflow-hidden ">
+              <div className=" bg-black">
+                <div className=" absolute top-10 -left-[26rem] z-50 mob:-left-[18rem]   mainperafont w-[28rem] mob:w-[22rem] bg-white overflow-hidden ">
                   <div className="flex border-b-2 px-12 border-[#F0F0F5] item-center pt-10  justify-between ">
                     <h1 className="text-black font-bold text-xl ">Your cart</h1>
                     <RxCross2
@@ -82,8 +83,10 @@ function Nav() {
                   {Products.map((data) => {
                     return <ProductsType prouctsData={data} />;
                   })}
-                  <div className="flex justify-between pt-8 px-10 mob:px-6
-                   ">
+                  <div
+                    className="flex justify-between pt-8 px-10 mob:px-6
+                   "
+                  >
                     <p className="text-black text-xl">Order total</p>
                     <p className="text-black text-xl">$14 226</p>
                   </div>
@@ -205,10 +208,10 @@ function ProductsType({ prouctsData }) {
           </h1>
           <p className="text-black font-base">{prouctsData.price}</p>
         </div>
-        <p className="text-[#565657]  text-sm">{prouctsData.sname}</p>
+        <p className="text-[#565657] text-sm">{prouctsData.sname}</p>
         <p className="text-[#565657] text-sm">{prouctsData.need}</p>
         <div className="flex justify-between items-center pt-4 ">
-          <div className="flex gap-x-3   items-center">
+          <div className="flex gap-x-3 items-center">
             <button
               onClick={() => {
                 setIsAdd((isAdd) => isAdd - 1);
