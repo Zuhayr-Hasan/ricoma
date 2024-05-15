@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "../header/Nav";
+import Nav from "../Navbar/Nav";
 import FormPage from "./FormPage";
 import { IoMdPlay } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
@@ -20,6 +20,7 @@ function Mainpage() {
   return (
     <div>
       <Nav />
+      {/* Below Customer lorem ips */}
       <div>
         <div>
           <div className="bg-[#046ee7] bgimg">
@@ -56,14 +57,14 @@ function Mainpage() {
                     Elit, scelerisque mauris aenean justo.{" "}
                   </p>
                 </div>
-                <div className="relative w-[60%] mob:w-full pt-12 pb-12 tab:w-full">
+                <div className="relative w-[60%] mob:w-full  pt-12 pb-12 tab:w-full">
                   <img
-                    src="images/mainimg/nividia-img.jpeg"
-                    alt="Nvidia"
-                    className="h-56 mob:w-full tab:w-full rounded-lg"
+                    src="images/mainimg/video.png"
+                    alt=""
+                    className="h-56 mob:w-full tab:w-full"
                   />
                   <button
-                    className="bg-[#E27838] rounded-full h-16 min-w-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  items-center pl-3"
+                    className="bg-[#E27838] rounded-full h-16 min-w-16   absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  items-center pl-3"
                     onClick={inClick}
                   >
                     <IoMdPlay className="text-white text-5xl" />
@@ -107,7 +108,7 @@ function Mainpage() {
                   </div>
                 </div>
                 <div className="flex item center gap-x-10 p-12 items-center ">
-                  <div className="bg-[#FFECEC] rounded-full min-w-[3rem] min-h-[3rem] flex justify-center ">
+                  <div className="bg-[#FFECEC]  rounded-full min-w-[3rem] min-h-[3rem] flex justify-center ">
                     <img
                       src="images/mainimg/Highest Quality.png"
                       alt=""
@@ -126,6 +127,7 @@ function Mainpage() {
           </div>
         </div>
       </div>
+      {/* Below Customer lorem ips end*/}
 
       <div className="pt-4 p-12 mob:px-3">
         <h1 className="text-5xl font-bold text-center pb-8 mob:text-3xl">
@@ -133,13 +135,14 @@ function Mainpage() {
           Aliquet Arcu Nunc.
         </h1>
         <div className="flex mob:flex-col justify-between gap-x-10 tab:flex-col">
+          {/* first card  */}
           <div className="w-1/2 mob:w-full  bg-white shadow-lg shadow-slate-400 tab:w-full">
             <div>
               <h1 className="text-2xl font-bold text-white bg-[#0F64C8] rounded-t-lg px-6 text-center py-2">
                 Lorem ipsum dolor sit <br />
                 amet, consectetur{" "}
               </h1>
-              <div className=" pb-8 relative">
+              <div className=" pb-8 relative ">
                 <div className="grid justify-center pt-6 bg-[#F5F5F5]">
                   <img
                     src="images/mainimg/machone.png"
@@ -154,8 +157,10 @@ function Mainpage() {
                   </p>
                 </div>
 
+                {/* inner review first  */}
                 {width > breakpoint ? <Mainfcard /> : <Slider />}
               </div>
+              {/* review2 end */}
               <div className="px-12 pt-56 mob:pt-0 tab:pt-0">
                 <p className="text-base pt-6 bg-[white]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -163,25 +168,32 @@ function Mainpage() {
                   tristique. Egestas eget fermentum at eget nunc et nisi eu
                   lorem.
                 </p>
-                <button className="text-xl font-bold text-white w-full h-16 bg-[#FE8101] mt-4 mb-8 shadow-sm shadow-slate-300">
+                <button className="text-xl font-bold text-white w-full  h-16 bg-[#FE8101] mt-4 mb-8 shadow-sm shadow-slate-300">
                   Dolor.
                 </button>
               </div>
+
+              {/* inner review first end */}
             </div>
           </div>
+          {/* first card end */}
+          {/* Sec card */}
           <div className="w-1/2 bg-white shadow-lg shadow-slate-400 mob:w-full mob:mt-12 tab:w-full">
             <Maincard />
           </div>
+
+          {/* Sec card div */}
         </div>
       </div>
       <div>
         <Footer />
       </div>
+      {/* Popup */}
       {isPopup ? (
-        <div className="bg-[#00000099] w-full h-full fixed top-0 z-50 mob:bg-black  ">
+        <div className="bg-[#00000099] w-full h-full fixed top-0  z-50 mob:bg-black  ">
           <div className="  flex justify-center items-center  top-96">
             <div className="w-[50%]  mob:w-full  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 absolute">
-              <div className="flex justify-end pr-4">
+              <div className="flex  justify-end pr-4">
                 <button
                   type="button"
                   className=" rounded-md p-2 text-white  hover:text-gray-700 "
@@ -190,11 +202,17 @@ function Mainpage() {
                   <RxCross2 className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
-              <img src="public/images/mainimg/video.png" alt="video" />
+              <img src="images/mainimg/video.png" alt="" />
 
               <div>
-                <div className="items-center -translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2">
-                  <button className="bg-[#00000066] h-20 min-w-20 flex justify-center items-center pl-2">
+                {/* <video >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/W608u6sBFpo?si=Q3bYnncpTvqI_LP6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+              </video> */}
+
+                <div className=" items-center -translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2">
+                  <button className="bg-[#00000066]  h-20 min-w-20 flex justify-center items-center pl-2">
                     <IoMdPlay className="text-white text-5xl" />
                   </button>
                 </div>

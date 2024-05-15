@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import { IoMdPlay } from "react-icons/io";
-import { useState } from "react";
 import { BiPlus } from "react-icons/bi";
 
 const FooterData = [
@@ -15,6 +14,34 @@ const FooterData = [
 ]
 
 function Footer() {
+  const [timeLeft, setTimeLeft] = useState("");
+
+  useEffect(() => {
+    const targetDate = new Date("December 31, 2024 23:59:59");
+    const timer = setInterval(() => {
+      const now = new Date();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        setTimeLeft("Time's up!");
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft(
+        `${days} DAYS : ${hours} HOURS : ${minutes} MIN : ${seconds} SEC`
+      );
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="bg-[#022B5B] mainperafont">
@@ -35,30 +62,30 @@ function Footer() {
               <FaPinterestP />
             </div>
           </div>
-          
-            <div className="flex justify-between gap-x-20 mob:hidden">
-              <div className="space-y-4  ">
-                <p className="text-white text-base font-bold ">Massa.</p>
-                <p className="text-sm text-[#A0A2A6] ">Aliquet et.</p>
-                <p className="text-sm text-[#A0A2A6] ">Donec.</p>
-                <p className="text-sm text-[#A0A2A6] ">Neque nec feugiat.</p>
-              </div>
-              <div className="space-y-4  ">
-                <p className="text-white text-base font-bold ">Enim.</p>
-                <p className="text-sm text-[#A0A2A6] ">Lorem.</p>
-                <p className="text-sm text-[#A0A2A6] ">Ipsium</p>
-                <p className="text-sm text-[#A0A2A6] ">Donec.</p>
-              </div>
-              <div className="space-y-4  ">
-                <p className="text-white text-base font-bold ">Fusce.</p>
-                <p className="text-sm text-[#A0A2A6] ">Amet.</p>
-                <p className="text-sm text-[#A0A2A6] ">Tincidunt.</p>
-                <p className="text-sm text-[#A0A2A6] ">Felis nec augue.</p>
-              </div>
+
+          <div className="flex justify-between gap-x-20 mob:hidden">
+            <div className="space-y-4  ">
+              <p className="text-white text-base font-bold ">Massa.</p>
+              <p className="text-sm text-[#A0A2A6] ">Aliquet et.</p>
+              <p className="text-sm text-[#A0A2A6] ">Donec.</p>
+              <p className="text-sm text-[#A0A2A6] ">Neque nec feugiat.</p>
             </div>
-            {FooterData.map((data) => {
-              return<Dropdown dropdata={data} />
-            })}
+            <div className="space-y-4  ">
+              <p className="text-white text-base font-bold ">Enim.</p>
+              <p className="text-sm text-[#A0A2A6] ">Lorem.</p>
+              <p className="text-sm text-[#A0A2A6] ">Ipsium</p>
+              <p className="text-sm text-[#A0A2A6] ">Donec.</p>
+            </div>
+            <div className="space-y-4  ">
+              <p className="text-white text-base font-bold ">Fusce.</p>
+              <p className="text-sm text-[#A0A2A6] ">Amet.</p>
+              <p className="text-sm text-[#A0A2A6] ">Tincidunt.</p>
+              <p className="text-sm text-[#A0A2A6] ">Felis nec augue.</p>
+            </div>
+          </div>
+          {FooterData.map((data) => {
+            return <Dropdown dropdata={data} />;
+          })}
 
           <div className=" w-[20%] mob:w-full relative">
             <img src="images/footerimg.png" alt="" className=" mob:w-full  " />
@@ -89,7 +116,7 @@ function Footer() {
         </p>
         <h1 className="text-black font-bold text-xl text-center mob:text-lg">
           {" "}
-          2 DAYS : 15 HOURS : 03 MIN : 00 SEC
+          {timeLeft}
         </h1>
         <button className="text-white font-bold text-base rounded-3xl border-2 px-6 py-1 border-white bg-[#0076FF]  ">
           Lorem Ipsum{" "}
@@ -127,8 +154,6 @@ function Dropdown({dropdata}) {
           ) : null}
         </div>
       </div>
-      
-     
     </div>
   );
 }

@@ -7,7 +7,6 @@ function Mainfcard() {
       <div className="px-12 absolute w-full -bottom-[5rem] ">
         <div className="bg-[#FFFFFF] p-4 mt-8 relative shadow-sm shadow-slate-300">
           <img src="images/mainimg/fblogo.png" alt="" className="h-6" />
-          {/* review  */}
           <div className="flex gap-x-6 items-center ">
             <div className="pl-4">
               <img
@@ -29,8 +28,6 @@ function Mainfcard() {
             </div>
           </div>
 
-          {/* review  end*/}
-
           <div className="flex justify-end items-end ">
             <div className="h-12 w-12 p-2  bg-[#FFAA00] absolute -top-3  ">
               <img src="images/mainimg/coma.png" alt="" className="" />
@@ -39,12 +36,9 @@ function Mainfcard() {
         </div>
       </div>
 
-      {/* review */}
-
       <div className="px-12 pt-24 absolute w-full">
         <div className="bg-[#FFFFFF] p-4 mt-8 relative  shadow-sm shadow-slate-300">
           <img src="images/mainimg/fblogo.png" alt="" className="h-6" />
-          {/* review  */}
           <div className="flex gap-x-6 items-center">
             <div className="pl-4">
               <img
@@ -67,7 +61,6 @@ function Mainfcard() {
               </div>
             </div>
           </div>
-          {/* review  end*/}
 
           <div className="flex justify-end items-end ">
             <div className="h-12 w-12 p-2  bg-[#FFAA00] absolute -top-1  ">
